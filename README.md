@@ -14,6 +14,6 @@ Press UP until you get to the far right of the list and you should now see your 
 Now press RIGHT twice more until you get to "Up/Down to change active screen".  You can now change your available screens (bottom row) 
 and toggle/select your new screen into a new or existing screen slot by pressing UP or DOWN (it will show you the screen active in the top row and change the picture in the bottom row to match).
 Once it is selected, keep pressing RIGHT until you get to the "Main Menu" top label, and press UP to save and exit back to the main menu.
-Press settings key again or hold RIGHT until you return to the main dash screen and press right or left until you get to your new screen location!
+Hold RIGHT until you return to the main dash screen and press right or left until you see your new screen live!
 
 
