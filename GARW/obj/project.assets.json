@@ -1,0 +1,161 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "SSH.NET/2023.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SshNet.Security.Cryptography": "[1.3.0]"
+        },
+        "compile": {
+          "lib/net7.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Renci.SshNet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "SshNet.Security.Cryptography/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SshNet.Security.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/SshNet.Security.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SSH.NET/2023.0.0": {
+      "sha512": "g+3VDUrYhm0sqSxmlQFgRFrmBxhQvVh4pfn4pqjkX7WXE3tTjt1tIsOtjuz3mz/5s8gFFQVRydwCJ7Ohs54sJA==",
+      "type": "package",
+      "path": "ssh.net/2023.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Renci.SshNet.dll",
+        "lib/net462/Renci.SshNet.xml",
+        "lib/net6.0/Renci.SshNet.dll",
+        "lib/net6.0/Renci.SshNet.xml",
+        "lib/net7.0/Renci.SshNet.dll",
+        "lib/net7.0/Renci.SshNet.xml",
+        "lib/netstandard2.0/Renci.SshNet.dll",
+        "lib/netstandard2.0/Renci.SshNet.xml",
+        "lib/netstandard2.1/Renci.SshNet.dll",
+        "lib/netstandard2.1/Renci.SshNet.xml",
+        "ssh.net.2023.0.0.nupkg.sha512",
+        "ssh.net.nuspec"
+      ]
+    },
+    "SshNet.Security.Cryptography/1.3.0": {
+      "sha512": "5pBIXRjcSO/amY8WztpmNOhaaCNHY/B6CcYDI7FSTgqSyo/ZUojlLiKcsl+YGbxQuLX439qIkMfP0PHqxqJi/Q==",
+      "type": "package",
+      "path": "sshnet.security.cryptography/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/SshNet.Security.Cryptography.dll",
+        "lib/net20/SshNet.Security.Cryptography.xml",
+        "lib/net40/SshNet.Security.Cryptography.dll",
+        "lib/net40/SshNet.Security.Cryptography.xml",
+        "lib/net45/SshNet.Security.Cryptography.dll",
+        "lib/net45/SshNet.Security.Cryptography.xml",
+        "lib/netstandard1.0/SshNet.Security.Cryptography.dll",
+        "lib/netstandard1.0/SshNet.Security.Cryptography.xml",
+        "lib/netstandard1.3/SshNet.Security.Cryptography.dll",
+        "lib/netstandard1.3/SshNet.Security.Cryptography.xml",
+        "lib/netstandard2.0/SshNet.Security.Cryptography.dll",
+        "lib/netstandard2.0/SshNet.Security.Cryptography.xml",
+        "lib/portable-net45+win8+wpa81/SshNet.Security.Cryptography.dll",
+        "lib/portable-net45+win8+wpa81/SshNet.Security.Cryptography.xml",
+        "lib/sl4/SshNet.Security.Cryptography.dll",
+        "lib/sl4/SshNet.Security.Cryptography.xml",
+        "lib/sl5/SshNet.Security.Cryptography.dll",
+        "lib/sl5/SshNet.Security.Cryptography.xml",
+        "lib/uap10.0/SshNet.Security.Cryptography.dll",
+        "lib/uap10.0/SshNet.Security.Cryptography.xml",
+        "lib/wp71/SshNet.Security.Cryptography.dll",
+        "lib/wp71/SshNet.Security.Cryptography.xml",
+        "lib/wp8/SshNet.Security.Cryptography.dll",
+        "lib/wp8/SshNet.Security.Cryptography.xml",
+        "sshnet.security.cryptography.1.3.0.nupkg.sha512",
+        "sshnet.security.cryptography.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "SSH.NET >= 2023.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/dustinsterkenburg/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/dustinsterkenburg/Documents/GitHub/C#GARWDashUploader/GARW/GARWDashUploader.csproj",
+      "projectName": "GARWDashUploader",
+      "projectPath": "/Users/dustinsterkenburg/Documents/GitHub/C#GARWDashUploader/GARW/GARWDashUploader.csproj",
+      "packagesPath": "/Users/dustinsterkenburg/.nuget/packages/",
+      "outputPath": "/Users/dustinsterkenburg/Documents/GitHub/C#GARWDashUploader/GARW/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/dustinsterkenburg/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "dependencies": {
+          "SSH.NET": {
+            "target": "Package",
+            "version": "[2023.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
