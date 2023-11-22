@@ -58,6 +58,8 @@ class Program
                 client.RunCommand("touch /opt/Garw_IC7/library/screen_list.txt");
                 client.RunCommand("touch /opt/Garw_IC7/library/screen_locations.txt");
                 client.RunCommand("touch /opt/Garw_IC7/library/screens_available.txt");
+                //check for empty file and add a 0 to the config
+                client.RunCommand("[ -s /opt/Garw_IC7/library/screens_available.txt ] || echo 0 > /opt/Garw_IC7/library/screens_available.txt");
                 client.Disconnect();
             }
 
