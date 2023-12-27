@@ -120,7 +120,7 @@ class Program
                 //System.Console.WriteLine(execCmd);
                 client.RunCommand(execCmd);
                 //add the name to the screen list for display in settings
-                execCmd = "grep -E '" + dashName + "' /opt/Garw_IC7/library/screen_list.txt || echo '" + dashName + "' >> /opt/Garw_IC7/library/screen_list.txt";
+                execCmd = "grep -E '" + dashName + "' /opt/Garw_IC7/library/screen_list.txt || echo '" + dashName.Replace("_main","") + "' >> /opt/Garw_IC7/library/screen_list.txt";
                 //System.Console.WriteLine(execCmd);
                 client.RunCommand(execCmd);
                 //add the location to the new dash screen files
