@@ -112,7 +112,7 @@ class Program
                 //System.Console.WriteLine(execCmd);
                 client.RunCommand(execCmd);
                 //if the dash was not already added prior then add one to screens available for the settings screen
-                execCmd = "grep -L '" + dashName + "' /opt/Garw_IC7/library/screen_list.txt || cat /opt/Garw_IC7/library/screens_available.txt | awk -F: '{print $1=$1+1}' > /opt/Garw_IC7/library/temp.txt";
+                execCmd = "grep -L '" + dashName.Replace("_main","") + "' /opt/Garw_IC7/library/screen_list.txt || cat /opt/Garw_IC7/library/screens_available.txt | awk -F: '{print $1=$1+1}' > /opt/Garw_IC7/library/temp.txt";
                 //System.Console.WriteLine(execCmd);
                 client.RunCommand(execCmd);
                 //move file (timing hack for the above command)
