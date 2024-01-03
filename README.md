@@ -2,7 +2,8 @@
 Command line program written in C# to add new dashscreens to your GARW device via wifi.
 
 **Usage:**
-From a command line run './GARWDashUploader PathToYourDashScreen.zip'
+From a command line run './GARWDashUploader --input PathToYourDashScreen.zip'
+You can also reset your GARW and remove all 3rd party screens using the --purge option.  This will not affect the built in screens.
 
 **Notes:**
 Your .zip file must be named the same as your dash.qml file (it is case sensitive).  You also must include a 162x99 dash.qml.png file that is a screenshot of the dash which will show in the GARW settings screen.
