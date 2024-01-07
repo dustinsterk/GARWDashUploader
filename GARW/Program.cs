@@ -68,7 +68,7 @@ class Program
             else if (args[0] == "--purge")
             {
                 System.Console.WriteLine("Purge process initialized.");
-                System.Console.WriteLine("Are you sure you want to remove all 3rd party dash designs from your system? (Y or N)");
+                System.Console.WriteLine("Are you sure you want to remove all 3rd party dash designs from your system?  This will also reset your active screen/dash order layout in GARW settings. (Y or N)");
                 string confirmRemoval = Console.ReadLine();
                 if (confirmRemoval.Length == 0)
                 {
@@ -96,12 +96,12 @@ class Program
                         //delete the entire library directory
                         execCmd = "rm -rf /opt/Garw_IC7/library/";
                         client.RunCommand(execCmd);
-                        System.Console.WriteLine("Resetting screen enabled file...");
-                        //fix the screen_enabled .txt file since if a new screen was set and now missing, it will cause a blank screen on reboot and empty browse previews in settings
+                        System.Console.WriteLine("Resetting GARW settings dash order/screens enabled file ...");
+                        //fix the screen_enabled .txt file since if a new screen was set and now missing, it will cause a blank screen on reboot and empty browse previews in GARW settings
                         //remove the existing file
                         execCmd = "rm /opt/Garw_IC7/screen_enabled.txt";
                         client.RunCommand(execCmd);
-                        //create the file which needs 5 screens to be added, otherwise browse in settings will be empty and missing the preview pictures
+                        //create a file which needs 5 screens to be added, otherwise browse library in GARW settings will be empty and missing the preview pictures
                         execCmd = "echo -e '1\n2\n3\n4\n5' >> /opt/Garw_IC7/screen_enabled.txt";
                         client.RunCommand(execCmd);
                         System.Console.WriteLine("Rebooting the GARW system...");
@@ -197,7 +197,7 @@ class Program
                         client.RunCommand("touch /opt/Garw_IC7/library/screen_list.txt");
                         client.RunCommand("touch /opt/Garw_IC7/library/screen_locations.txt");
                         client.RunCommand("touch /opt/Garw_IC7/library/screens_available.txt");
-                        //check for empty file and add a 0 to the config
+                        //check for a new/empty file and add a 0 to the config
                         client.RunCommand("[ -s /opt/Garw_IC7/library/screens_available.txt ] || echo 0 > /opt/Garw_IC7/library/screens_available.txt");
                         client.Disconnect();
                     }
