@@ -147,6 +147,9 @@ class Program
                         int totalEntries = archive.Entries.Count;
                         int checkEntries = 0;
                         foreach (ZipArchiveEntry e in archive.Entries){
+                            //Check to ensure all the files are in a folder
+
+
                             //Check for the .png file needed for the preview in settings
                             if (Path.GetFileName(e.FullName) == fileName + ".qml.png"){
                                 checkEntries++;
@@ -154,6 +157,12 @@ class Program
                             //Check for the dash screen itself
                             if (Path.GetFileName(e.FullName) == fileName + ".qml"){
                                 checkEntries++;
+
+                                //Check for a proper .zip with a parent folder with the same name as the .zip
+                                if (e.FullName.Contains(fileName + "/") == false){
+                                    checkEntries = -1;
+                                    break;
+                                }
                             }
                             //If the .zip is named '_main', it also contains a settings screen (by pressing the up key on the GARW), so ensure the dash screen design file also exists
                             if (fileName.ToLower().Contains("_main"))
@@ -163,6 +172,12 @@ class Program
                                 }
                             }
                         }
+                        //Check for invalid .zip without a parent folder
+                         if (checkEntries == -1 ){
+                            System.Console.WriteLine("Invalid .zip file structure. You must ensure the zip file contains a single folder with the same name as the .zip ane all additional files inside as children.");
+                            return;
+                         }
+
                         //If required contents are not found, stop and prompt user to check the .zip file
                         if (fileName.ToLower().Contains("_main"))
                         {
