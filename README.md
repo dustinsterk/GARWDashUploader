@@ -1,4 +1,4 @@
-# GARWDashUploader (FOR v4.x of the GARW firmware ONLY!  This is no longer valid for the v5.x firmware released Sept 2026, new tool coming)
+# GARWDashUploader (FOR v4.x of the GARW firmware ONLY!  For v5 and beyond, please use the GARW Genie tool for all 3rd party dash management: https://github.com/dustinsterk/GARWGenie
 Command line program written in C# to add new dashscreens to your GARW device via wifi.
 
 **Usage:**
